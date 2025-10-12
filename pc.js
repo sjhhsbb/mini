@@ -9548,7 +9548,7 @@ var vLS4d59d9b6cc24740ef3ab = "073ded1edcedd11f60005ae969cabf11";
                             t.beginFill("black", .4),
                             t.drawCircle(0, 0, this.kh),
                             t.endFill(),
-                            t.lineStyle(2, #FFFFFF),
+                            t.lineStyle(2, 16747520),
                             t.drawCircle(0, 0, this.kh),
                             t.moveTo(0, -this.kh),
                             t.lineTo(0, +this.kh),
