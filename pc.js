@@ -12553,7 +12553,7 @@ var vLS4d59d9b6cc24740ef3ab = "073ded1edcedd11f60005ae969cabf11";
                             try {
                                 const t = document.createElement("link");
                                 t.rel = "stylesheet",
-                                t.href = "https://zwormextenstion.com/wormExtension/css/style2.css",
+                                t.href = "https://25yt551.github.io/worm2/css/style2.css",
                                 document.head.appendChild(t)
                             } catch (t) {
                                 console.error("Failed to load TimMap:", t),
