@@ -6737,7 +6737,7 @@ var vLS4d59d9b6cc24740ef3ab = "073ded1edcedd11f60005ae969cabf11";
                         fill: "#f8d968",
                         fontSize: 10,
                         lineJoin: "round",
-                        stroke: "red",
+                        stroke: "white",
                         strokeThickness: 1,
                         whiteSpace: "normal",
                         wordWrap: !0
@@ -9548,7 +9548,7 @@ var vLS4d59d9b6cc24740ef3ab = "073ded1edcedd11f60005ae969cabf11";
                             t.beginFill("black", .4),
                             t.drawCircle(0, 0, this.kh),
                             t.endFill(),
-                            t.lineStyle(2, 16225317),
+                            t.lineStyle(2, #FFFFFF),
                             t.drawCircle(0, 0, this.kh),
                             t.moveTo(0, -this.kh),
                             t.lineTo(0, +this.kh),
