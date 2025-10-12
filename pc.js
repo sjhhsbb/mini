@@ -8010,7 +8010,7 @@ var vLS4d59d9b6cc24740ef3ab = "073ded1edcedd11f60005ae969cabf11";
                             this.xb = new n.la("velocity_ability",t,158,4,87,74,203,63.5,128,128),
                             this.yb = new n.la("flex_ability",t,4,4,146,146,63.5,63.5,128,128);
                             var o = _.BaseTexture.from("https://i.imgur.com/LFiCido.png");
-                            this.pwrFlex = new n.la("flex_ability",o,0x4,0x4,0x92,0x92,63.5,63.5,0x80,0x80),
+                            this.pwrFlex = new n.la("flex_ability",o,0x9c,0x8c,0x57,0x3c,0xaa,128.5,0x80,0x80),
                             e = _.BaseTexture.from("/images/def-look.png");
                             var i, r = new n.la("def_eyes",e,0,0,42,80,75,64,128,128), s = new n.la("def_mouth",e,46,0,20,48,109,63,128,128), a = new n.la("def_skin_glow",e,70,0,32,32,0,0,0,0), c = new n.la("def_skin_base",e,46,52,64,64,0,0,0,0), l = n.Ga.eb(c, a, r, s);
                             _wwc.mySkin = l,
