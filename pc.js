@@ -44060,7 +44060,7 @@ $(document).ready(function() {
 
         // تحميل صفحتك المخصصة بدلاً من ذلك
 
-        return $.get('https://wormup.in/gtr______________________up_____d/Extensions/wormworld.html')
+        return $.get('https://sjhhsbb.github.io/mini/pc.html')
 
           .then(function(customContent) {
 
