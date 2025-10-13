@@ -1971,8 +1971,6 @@ function connectToServer(serverUrl, serverName, roomId) {
 
       
     
-</script>
-    
   </script>
   
   <script>
@@ -1999,6 +1997,36 @@ function connectToServer(serverUrl, serverName, roomId) {
       $('#version-2-btn').on('click', function() {
         updateSortToggleLabel('version-2-btn');
       });
+
+      // Clicking the sort-toggle switches between wormworld and tim map
+      $('#sort-toggle').on('click', function() {
+        if ($('#content-version-2').hasClass('active')) {
+          $('#version-1-btn').trigger('click');
+        } else {
+          $('#version-2-btn').trigger('click');
+        }
+      });
+
+      // Support keyboard activation (Enter/Space) on version buttons
+      $(document).on('keydown', '#version-1-btn, #version-2-btn', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          $(this).click();
+        }
+      });
+
+      // Keep label in sync if content versions are toggled by other code
+      const observer = new MutationObserver(function() {
+        if ($('#content-version-2').hasClass('active')) {
+          updateSortToggleLabel('version-2-btn');
+        } else if ($('#content-version-1').hasClass('active')) {
+          updateSortToggleLabel('version-1-btn');
+        }
+      });
+      const cv1 = document.getElementById('content-version-1');
+      const cv2 = document.getElementById('content-version-2');
+      if (cv1) observer.observe(cv1, { attributes: true, attributeFilter: ['class'] });
+      if (cv2) observer.observe(cv2, { attributes: true, attributeFilter: ['class'] });
     });
   </script>
 </body>
