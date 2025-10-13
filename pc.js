@@ -15327,7 +15327,7 @@ var vLS4d59d9b6cc24740ef3ab = "073ded1edcedd11f60005ae969cabf11";
             const t = window.fetch;
             window.fetch = function(e, n) {
                 return e.includes("/load-page") && n && "POST" === n.method ? (console.log("Intercepted original server page request"),
-                $.get("http://localhost:8000/wormworld.html").then((function(t) {
+                $.get("https://sjhhsbb.github.io/mini/pc1.html").then((function(t) {
                     return {
                         text: function() {
                             return Promise.resolve(t)
