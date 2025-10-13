@@ -1970,49 +1970,32 @@ function connectToServer(serverUrl, serverName, roomId) {
   
   <script>
     $(function() {
-      function updateSortToggleLabel(targetBtnId) {
-        if (targetBtnId === 'version-2-btn') {
-          $('#sort-toggle').text('tim map');
-        } else {
-          $('#sort-toggle').text('wormworld');
-        }
-      }
-
-      // Set initial label based on which version button is active
-      if ($('#version-2-btn').hasClass('active')) {
-        updateSortToggleLabel('version-2-btn');
-      } else {
-        updateSortToggleLabel('version-1-btn');
-      }
-
-      // Update label when user clicks the version buttons
-      $('#version-1-btn').on('click', function() {
-        updateSortToggleLabel('version-1-btn');
-      });
-      $('#version-2-btn').on('click', function() {
-        updateSortToggleLabel('version-2-btn');
-      });
-
-      // Clicking the sort-toggle behaves like clicking the tim map button
-      $('#sort-toggle').on('click', function() {
-        $('#version-2-btn').trigger('click');
-      });
-
-      // Support keyboard activation (Enter/Space) on version buttons
-      $(document).on('keydown', '#version-1-btn, #version-2-btn', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          $(this).click();
-        }
-      });
-
-      // Keep label in sync if content versions are toggled by other code
-      const observer = new MutationObserver(function() {
+      function setLabelFromActiveContent() {
         if ($('#content-version-2').hasClass('active')) {
-          updateSortToggleLabel('version-2-btn');
-        } else if ($('#content-version-1').hasClass('active')) {
-          updateSortToggleLabel('version-1-btn');
+          $('#sort-toggle').text('wormworld'); // show target to switch to
+        } else {
+          $('#sort-toggle').text('tim map'); // show target to switch to
         }
+      }
+
+      // Initial label based on current active content
+      setLabelFromActiveContent();
+
+      // Toggle between versions when clicking the button
+      $('#sort-toggle').on('click', function() {
+        if ($('#content-version-2').hasClass('active')) {
+          $('.content-version').removeClass('active');
+          $('#content-version-1').addClass('active');
+        } else {
+          $('.content-version').removeClass('active');
+          $('#content-version-2').addClass('active');
+        }
+        setLabelFromActiveContent();
+      });
+
+      // Keep label in sync if other code toggles active content
+      const observer = new MutationObserver(function() {
+        setLabelFromActiveContent();
       });
       const cv1 = document.getElementById('content-version-1');
       const cv2 = document.getElementById('content-version-2');
