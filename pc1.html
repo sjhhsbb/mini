@@ -1998,13 +1998,9 @@ function connectToServer(serverUrl, serverName, roomId) {
         updateSortToggleLabel('version-2-btn');
       });
 
-      // Clicking the sort-toggle switches between wormworld and tim map
+      // Clicking the sort-toggle behaves like clicking the tim map button
       $('#sort-toggle').on('click', function() {
-        if ($('#content-version-2').hasClass('active')) {
-          $('#version-1-btn').trigger('click');
-        } else {
-          $('#version-2-btn').trigger('click');
-        }
+        $('#version-2-btn').trigger('click');
       });
 
       // Support keyboard activation (Enter/Space) on version buttons
