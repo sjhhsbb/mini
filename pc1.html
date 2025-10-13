@@ -1974,5 +1974,32 @@ function connectToServer(serverUrl, serverName, roomId) {
 </script>
     
   </script>
+  
+  <script>
+    $(function() {
+      function updateSortToggleLabel(targetBtnId) {
+        if (targetBtnId === 'version-2-btn') {
+          $('#sort-toggle').text('tim map');
+        } else {
+          $('#sort-toggle').text('wormworld');
+        }
+      }
+
+      // Set initial label based on which version button is active
+      if ($('#version-2-btn').hasClass('active')) {
+        updateSortToggleLabel('version-2-btn');
+      } else {
+        updateSortToggleLabel('version-1-btn');
+      }
+
+      // Update label when user clicks the version buttons
+      $('#version-1-btn').on('click', function() {
+        updateSortToggleLabel('version-1-btn');
+      });
+      $('#version-2-btn').on('click', function() {
+        updateSortToggleLabel('version-2-btn');
+      });
+    });
+  </script>
 </body>
 </html>
