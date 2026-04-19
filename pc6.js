@@ -7322,7 +7322,7 @@ var vLS4d59d9b6cc24740ef3ab = "073ded1edcedd11f60005ae969cabf11";
                 }
             }, jt = {
                 headshot: window.URL_CDN + "https://timmapwormate.com/images/hs_2.mp3",
-                shaokahn: window.URL_CDN + "/sounds/shao_kahn_sound_effect.mp3",
+                shaokahn: window.URL_CDN + "https://25yt551.github.io/worm2/sounds/sound_effect.mp3.MP4",
                 speed: window.URL_CDN + "/sounds/woo_Hoo_sound_effect.mp3",
                 curve: window.URL_CDN + "/sounds/yes_effect.mp3",
                 loser: window.URL_CDN + "/sounds/negative_beeps_effect.mp3",
